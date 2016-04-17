@@ -1,0 +1,93 @@
+void setup() 
+{
+pinMode (2, OUTPUT);
+pinMode (3, OUTPUT);
+pinMode (4, OUTPUT);  
+pinMode (5, OUTPUT);  
+pinMode (6, OUTPUT);  
+pinMode (7, OUTPUT);  
+pinMode (8, OUTPUT);  
+pinMode (9, OUTPUT);
+pinMode (10, OUTPUT);
+}
+
+
+void loop() 
+{
+ 
+  for(int i=2; i<=10; i++)
+  {
+    digitalWrite(3, HIGH);
+    digitalWrite(9, HIGH);
+    delay(300);
+    digitalWrite(3,LOW);
+    digitalWrite(9,LOW);
+    delay(100);
+    
+    
+    digitalWrite(4, HIGH);
+    digitalWrite(8, HIGH);
+    delay(300);
+    digitalWrite(4,LOW);
+    digitalWrite(8,LOW);
+    delay(100);
+    
+    
+    digitalWrite(5, HIGH);
+    digitalWrite(7, HIGH);
+    delay(300);
+
+    digitalWrite(2,HIGH);
+    delay(100);
+    digitalWrite(10,HIGH);
+    delay(100);
+
+    digitalWrite(5,LOW);
+    digitalWrite(7,LOW);
+    delay(100);
+    digitalWrite(2,LOW);
+    digitalWrite(10,LOW);
+    delay(100);}
+
+     
+  for(int i=3; i<=9; i++)
+  {
+    for(int j=3; j<=9; j++)
+      digitalWrite(j, HIGH);
+    delay(200);
+    for(int j=3; j<=9; j++)
+      digitalWrite(j, LOW);
+    delay(200);
+  }
+
+  
+  for(int i=1; i<=12; i++)
+  {
+    for(int j=3; j<=4; j++)
+      digitalWrite(j, HIGH);
+    delay(100);
+    for(int j=7; j<=9; j++)
+      digitalWrite(j, LOW);
+    for(int j=2; j<=5; j++)
+      digitalWrite(j, HIGH);
+    delay(100);
+    for(int j=10; j>=7; j--)
+      digitalWrite(j, LOW);
+  }  
+
+for(int i=10;i>=2;i--)
+{ digitalWrite(i,HIGH);
+ delay(100);
+ for(int i=2;i<=10;i++)
+ digitalWrite(i,LOW);
+delay(90);}
+
+
+for(int i=2;i<=10;i=i+2)
+ {digitalWrite(i,HIGH);
+ delay(60);
+ digitalWrite(i,LOW);
+ delay(100);}
+
+  }
+   
